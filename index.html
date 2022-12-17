@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="popup">
+    <div class="popup _hidden">
         <div class="popup_container">
-            <div class="close_popup">
-                <img class="close_popup" src="svg/form-x.svg" alt="Закрыть">
-            </div>
             <div class="popup_body">
+                <div class="close_popup">
+                    <img class="close_popup" src="svg/form-x.svg" alt="Закрыть">
+                </div>
                 <h2>Ваш фидбек</h2>
                 <div class="list">
                     <p>Как часто вы заходите на сайт?</p>
@@ -59,8 +59,6 @@
                     </a>
                 </div>
                 <div class="hamburger_menu">
-                    <span></span>
-                    <span></span>
                     <span></span>
                 </div>
                 <div class="menu_item">
@@ -109,7 +107,7 @@
             </div>
             <div class="trend_container">
                 <div class="trend_img">
-                    <img src="images/trend3.jpg" alt="Путешествие">
+                   <img src="images/trend3.jpg" alt="Путешествие">
                 </div>
                 <div class="trend_title">
                     <ul class="trend_tags">
@@ -123,7 +121,7 @@
             </div>
             <div class="trend_container">
                 <div class="trend_img">
-                    <img src="images/trend4.jpg" alt="Лимоны">
+                   <img src="images/trend4.jpg" alt="Лимоны">
                 </div>
                 <div class="trend_title">
                     <ul class="trend_tags">
@@ -139,7 +137,7 @@
     </div>
     <div class="blog_content">
         <main>
-            <div class="card">
+            <article class="card">
                 <div class="card_img">
                     <img src="images/last-post1.jpg" alt="Пляж">
                 </div>
@@ -161,8 +159,8 @@
                         <p>Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</p>
                     </div>
                 </div>
-            </div>
-            <div class="card">
+            </article>
+            <article class="card">
                 <div class="card_img">
                     <img src="images/last-post2.jpg" alt="Йога">
                 </div>
@@ -184,8 +182,8 @@
                         <p>Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найти в шкафу.</p>
                     </div>
                 </div>
-            </div>
-            <div class="card">
+            </article>
+            <article class="card">
                 <div class="card_img">
                     <img src="images/last-post3.jpg" alt="Лучшие музыкальные фестивали этого лета">
                 </div>
@@ -207,8 +205,8 @@
                         <p>Мы составили список лучших летних фестивалей по всему миру.</p>
                     </div>
                 </div>
-            </div>
-            <div class="card">
+            </article>
+            <article class="card">
                 <div class="card_img">
                     <img src="images/last-post4.jpg" alt="Наукоёмкий подход к кулинарии">
                 </div>
@@ -230,8 +228,8 @@
                         <p>Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</p>
                     </div>
                 </div>
-            </div>
-            <div class="card">
+            </article>
+            <article class="card">
                 <div class="card_img">
                     <img src="images/last-post5.jpg" alt="Делаем модные принты на подушках для интерьера">
                 </div>
@@ -254,10 +252,10 @@
                         <p>Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
                     </div>
                 </div>
-            </div>
+            </article>
         </main>
         <aside>
-            <div class="new_posts">
+            <section class="new_posts">
                 <div class="section_name">
                     <h4>Новые посты</h4>
                 </div>
@@ -328,8 +326,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="section_search">
+            </section>
+            <section class="section_search">
                 <form class="search" method="get">
                     <label>
                         <input class="field" placeholder="Найти..." required>
@@ -338,8 +336,8 @@
                     <button class="icon_search"></button>
                     <span class="visually-hidden">Кнопка поиска</span>
                 </form>
-            </div>
-            <div class="mailing_list_group">
+            </section>
+            <section class="mailing_list_group">
                 <div class="section_name">
                     <h4>Рассылка</h4>
                 </div>
@@ -353,8 +351,8 @@
                         <span class="visually-hidden">Подписаться на рассылку</span>
                     </label>
                 </form>
-            </div>
-            <div class="tags">
+            </section>
+            <section class="tags">
                 <div class="section_name">
                     <h4>Теги</h4>
                 </div>
@@ -370,20 +368,20 @@
                         <li><a href="0">Health</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="topics">
+            </section>
+            <section class="topics">
                 <div class="section_name">
                     <h4>Темы</h4>
                 </div>
                 <ul class="topics_list">
-                    <li><a href="0">Красота</a><span>12</span></li>
-                    <li><a href="0">Здоровье</a><span>4</span></li>
-                    <li><a href="0">Образ жизни</a><span>145</span></li>
-                    <li><a href="0">Музыка</a><span>28</span></li>
-                    <li><a href="0">Спорт</a><span>62</span></li>
-                    <li><a href="0">Йога</a><span>8</span></li>
+                    <li><a href="0">Красота</a><sup>12</sup></li>
+                    <li><a href="0">Здоровье</a><sup>4</sup></li>
+                    <li><a href="0">Образ жизни</a><sup>145</sup></li>
+                    <li><a href="0">Музыка</a><sup>28</sup></li>
+                    <li><a href="0">Спорт</a><sup>62</sup></li>
+                    <li><a href="0">Йога</a><sup>8</sup></li>
                 </ul>
-            </div>
+            </section>
         </aside>
     </div>
     <div class="our_products">
@@ -414,10 +412,10 @@
                                 <span>800 &#8381;</span>
                             </div>
                         </div>
-                        <label>
-                            <input type="button" class="shop_button" value="В магазин">
+                        <form>
+                            <input type="button" onclick="window.location.href=0;" class="shop_button" value="В магазин">
                             <span class="visually-hidden">В магазин</span>
-                        </label>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -443,10 +441,10 @@
                                 <span>3500 &#8381;</span>
                             </div>
                         </div>
-                        <label>
-                            <input type="button" class="shop_button" value="В магазин">
+                        <form>
+                            <input type="button" onclick="window.location.href=0;" class="shop_button" value="В магазин">
                             <span class="visually-hidden">В магазин</span>
-                        </label>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -475,10 +473,10 @@
                                 <span>400 &#8381;</span>
                             </div>
                         </div>
-                        <label>
-                            <input type="button" class="shop_button" value="В магазин">
+                        <form>
+                            <input type="button" onclick="window.location.href=0;" class="shop_button" value="В магазин">
                             <span class="visually-hidden">В магазин</span>
-                        </label>
+                        </form>
                     </div>
                 </div>
             </div>
