@@ -25,7 +25,6 @@ body {
 
 @media (min-width: 1201px) {
     .popup {
-        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -35,6 +34,17 @@ body {
         z-index: 1;
     }
 
+    ._hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
     .popup_container {
         display: flex;
         flex-direction: column;
@@ -42,10 +52,6 @@ body {
         height: 100%;
     }
 
-    .close_popup img {
-        width: 30px;
-        height: 100%;
-    }
 
     .popup_body {
         margin: auto;
@@ -95,6 +101,15 @@ body {
         background-size: 10px;
         background-position-x: 95%;
         background-position-y: center;
+    }
+
+
+    .close_popup img {
+        position: absolute;
+        top: -360px;
+        right: 0px;
+        width: 25px;
+        height: 100%;
     }
 
     .form_radio {
@@ -208,7 +223,7 @@ body {
 
     .navbar {
         position: relative;
-        width: 70%;
+        max-width: 1200px;
         padding-top: 26px;
         margin-right: auto;
         margin-left: auto;
@@ -492,6 +507,7 @@ body {
     .card_news_img {
         display: flex;
         width: 70px;
+        height: 100%;
         margin-left: 2px;
     }
 
@@ -688,7 +704,7 @@ body {
         color: #b59f5b;
     }
 
-    .topics_list span {
+    .topics_list sup  {
         font-size: 12px;
         color: #b59f5b;
         padding-left: 5px;
@@ -724,6 +740,7 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        align-items: flex-start;
         justify-content: space-between;
     }
 
@@ -742,7 +759,7 @@ body {
     .product_information {
         position: relative;
         width: 100%;
-        height: 268px;
+        min-height: 268px;
         /*padding-top: 53px;
         padding-right: 23px;
         padding-left: 23px; 53px 23px auto 23px;*/
@@ -766,6 +783,10 @@ body {
         margin: 54px auto 8px 23px;
     }
 
+    .product_text {
+        position: relative;
+    }
+
     .product_text p {
         width: 298px;
         font-size: 15px;
@@ -778,6 +799,11 @@ body {
         color: #b59f5b;
     }
 
+    .product_text a:hover {
+        color: #b59f5b;
+        text-decoration: underline;
+    }
+
     .price_container {
         display: flex;
         align-items: flex-end;
@@ -785,6 +811,7 @@ body {
         justify-content: space-between;
         margin-left: 23px;
         margin-right: 23px;
+        margin-bottom: 20px;
     }
 
     .price {
@@ -799,12 +826,12 @@ body {
     }
 
     .product_price_new {
-
         font-size: 20px;
         font-weight: bold;
     }
 
     .shop_button {
+        position: relative;
         width: 140px;
         height: 50px;
         font-size: 14px;
@@ -813,6 +840,10 @@ body {
         background-color: #b59f5b;
         border: none;
         color: #ffffff;
+    }
+
+    .shop_button:hover {
+        background-color: #323232;
     }
 
     footer {
@@ -903,7 +934,6 @@ body {
 
 @media (min-width: 641px) and (orientation: portrait) and (max-width: 1200px) {
     .popup {
-        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -911,6 +941,17 @@ body {
         height: 100%;
         background: rgba(0,0,0,0.8);
         z-index: 1;
+    }
+
+    ._hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
     }
 
     .popup_container {
@@ -1102,36 +1143,45 @@ body {
         width: 20.5%;
     }
 
-    .menu {
-        display: none;
-        list-style-type: none;
-        padding-left: 0;
-        margin-bottom: 0;
-    }
-
-    .menu li {
-        display: inline-block;
-    }
-
-    .menu li a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 13px;
-        text-transform: uppercase;
-        padding-left: 30px;
-    }
-
-    .menu li a:hover {
-        text-decoration: underline;
-    }
-
     .menu_item {
-        display: flex;
-        flex-flow: row nowrap;
-    }
+        display: none;
+        }
 
     .hamburger_menu {
-        
+        position: relative;
+        width: 24px;
+        height: 20px;
+        display: block;
+    }
+
+    .hamburger_menu span {
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: #ffffff;
+        margin: 0 auto;
+    }
+
+    .hamburger_menu span:before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: #ffffff;
+        margin: 0 auto;
+        top: 8px;
+        right: 0;
+    }
+
+    .hamburger_menu span:after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: #ffffff;
+        margin: 0 auto;
+        bottom: 8px;
+        right: 0;
     }
 
     .popular_articles {
@@ -1407,6 +1457,7 @@ body {
     .card_news_img {
         display: flex;
         width: 70px;
+        height: 100%;
         margin-left: 2px;
     }
 
@@ -1639,6 +1690,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     .product_card {
@@ -1678,6 +1730,10 @@ body {
         margin: 7vw auto 1vw 2.9vw;
     }
 
+    .product_text {
+        position: relative;
+    }
+
     .product_text p {
         width: 38vw;
         font-size: 1.9vw;
@@ -1688,6 +1744,11 @@ body {
     .product_text a {
         text-decoration: none;
         color: #b59f5b;
+    }
+
+    .product_text a:active {
+        color: #b59f5b;
+        text-decoration: underline;
     }
 
     .price_container {
@@ -1717,6 +1778,7 @@ body {
     }
 
     .shop_button {
+        position: relative;
         width: 18.2vw;
         height: 6.5vw;
         font-size: 1.8vw;
@@ -1725,6 +1787,10 @@ body {
         background-color: #b59f5b;
         border: none;
         color: #ffffff;
+    }
+
+    .shop_button:active {
+        background-color: #323232;
     }
 
     footer {
@@ -1815,7 +1881,6 @@ body {
 
 @media (min-width: 641px) and (orientation: landscape) and (max-width: 1200px) {
     .popup {
-        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -1823,6 +1888,17 @@ body {
         height: 100%;
         background: rgba(0,0,0,0.8);
         z-index: 1;
+    }
+
+    ._hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
     }
 
     .popup_container {
@@ -2014,33 +2090,47 @@ body {
         width: 20.5%;
     }
 
-    .menu {
-        display: none;
-        list-style-type: none;
-        padding-left: 0;
-        margin-bottom: 0;
-    }
-
-    .menu li {
-        display: inline-block;
-    }
-
-    .menu li a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 13px;
-        text-transform: uppercase;
-        padding-left: 30px;
-    }
-
-    .menu li a:hover {
-        text-decoration: underline;
-    }
-
     .menu_item {
-        display: flex;
-        flex-flow: row nowrap;
+        display: none;
     }
+
+    .hamburger_menu {
+        position: relative;
+        width: 24px;
+        height: 20px;
+        display: block;
+    }
+
+    .hamburger_menu span {
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: #ffffff;
+        margin: 0 auto;
+    }
+
+    .hamburger_menu span:before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: #ffffff;
+        margin: 0 auto;
+        top: 8px;
+        right: 0;
+    }
+
+    .hamburger_menu span:after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: #ffffff;
+        margin: 0 auto;
+        bottom: 8px;
+        right: 0;
+    }
+
 
     .popular_articles {
         margin-top: 8%;
@@ -2545,6 +2635,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     .product_card {
@@ -2584,6 +2675,10 @@ body {
         margin: 7vw auto 1vw 2.9vw;
     }
 
+    .product_text {
+        position: relative;
+    }
+
     .product_text p {
         width: 38vw;
         font-size: 1.9vw;
@@ -2594,6 +2689,11 @@ body {
     .product_text a {
         text-decoration: none;
         color: #b59f5b;
+    }
+
+    .product_text a:active {
+        color: #b59f5b;
+        text-decoration: underline;
     }
 
     .price_container {
@@ -2623,6 +2723,7 @@ body {
     }
 
     .shop_button {
+        position: relative;
         width: 18.2vw;
         height: 6.5vw;
         font-size: 1.8vw;
@@ -2631,6 +2732,10 @@ body {
         background-color: #b59f5b;
         border: none;
         color: #ffffff;
+    }
+
+    .shop_button:active {
+        background-color: #323232;
     }
 
     footer {
@@ -2720,7 +2825,6 @@ body {
 
     @media (max-width: 640px) and (orientation: portrait) {
         .popup {
-            display: none;
             position: fixed;
             top: 0;
             left: 0;
@@ -2728,6 +2832,17 @@ body {
             height: 100%;
             background: rgba(0,0,0,0.8);
             z-index: 1;
+        }
+
+        ._hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            border: 0;
+            clip: rect(0 0 0 0);
+            overflow: hidden;
         }
 
         .popup_container {
@@ -2918,35 +3033,48 @@ body {
         width: 75vw;
     }
 
-    .menu {
-        display: none;
-        list-style-type: none;
-        padding-left: 0;
-        margin-bottom: 0;
-    }
+        .menu_item {
+            display: none;
+        }
 
-    .menu li {
-        display: inline-block;
-    }
+        .hamburger_menu {
+            position: relative;
+            width: 24px;
+            height: 20px;
+            display: block;
+        }
 
-    .menu li a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 13px;
-        text-transform: uppercase;
-        padding-left: 30px;
-    }
+        .hamburger_menu span {
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            background-color: #ffffff;
+            margin: 0 auto;
+        }
 
-    .menu li a:hover {
-        text-decoration: underline;
-    }
+        .hamburger_menu span:before {
+            content: "";
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            background-color: #ffffff;
+            margin: 0 auto;
+            top: 8px;
+            right: 0;
+        }
 
-    .menu_item {
-        display: flex;
-        flex-flow: row nowrap;
-    }
+        .hamburger_menu span:after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            background-color: #ffffff;
+            margin: 0 auto;
+            bottom: 8px;
+            right: 0;
+        }
 
-    .popular_articles {
+        .popular_articles {
         margin-top: 11.1vw;
     }
 
@@ -3435,6 +3563,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     .product_card {
@@ -3475,6 +3604,10 @@ body {
         margin: 15.8vw auto 2.2vw 5.8vw;
     }
 
+    .product_text {
+        position: relative;
+    }
+
     .product_text p {
         width: 80vw;
         font-size: 4.1vw;
@@ -3486,6 +3619,11 @@ body {
         text-decoration: none;
         color: #b59f5b;
     }
+
+        .product_text a:active {
+            color: #b59f5b;
+            text-decoration: underline;
+        }
 
     .price_container {
         display: flex;
@@ -3515,6 +3653,7 @@ body {
     }
 
     .shop_button {
+        position: relative;
         width: 38.8vw;
         height: 13.8vw;
         font-size: 3.8vw;
@@ -3524,6 +3663,10 @@ body {
         border: none;
         color: #ffffff;
     }
+
+        .shop_button:active {
+            background-color: #323232;
+        }
 
     footer {
         width: 91.6vw;
@@ -3613,7 +3756,6 @@ body {
 
 @media (max-width: 640px) and (orientation: landscape) {
     .popup {
-        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -3621,6 +3763,17 @@ body {
         height: 100%;
         background: rgba(0,0,0,0.8);
         z-index: 1;
+    }
+
+    ._hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
     }
 
     .header {
@@ -3674,33 +3827,47 @@ body {
         width: 75vh;
     }
 
-    .menu {
-        display: none;
-        list-style-type: none;
-        padding-left: 0;
-        margin-bottom: 0;
-    }
-
-    .menu li {
-        display: inline-block;
-    }
-
-    .menu li a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 13px;
-        text-transform: uppercase;
-        padding-left: 30px;
-    }
-
-    .menu li a:hover {
-        text-decoration: underline;
-    }
-
     .menu_item {
-        display: flex;
-        flex-flow: row nowrap;
+        display: none;
     }
+
+    .hamburger_menu {
+        position: relative;
+        width: 24px;
+        height: 20px;
+        display: block;
+    }
+
+    .hamburger_menu span {
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: #ffffff;
+        margin: 0 auto;
+    }
+
+    .hamburger_menu span:before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: #ffffff;
+        margin: 0 auto;
+        top: 8px;
+        right: 0;
+    }
+
+    .hamburger_menu span:after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        background-color: #ffffff;
+        margin: 0 auto;
+        bottom: 8px;
+        right: 0;
+    }
+
 
     .popular_articles {
         margin-top: 11.1vh;
@@ -4201,6 +4368,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     .product_card {
@@ -4240,6 +4408,9 @@ body {
         text-transform: uppercase;
         margin: 15.8vh auto 2.2vh 5.8vh;
     }
+    .product_text {
+        position: relative;
+    }
 
     .product_text p {
         width: 80vw;
@@ -4251,6 +4422,11 @@ body {
     .product_text a {
         text-decoration: none;
         color: #b59f5b;
+    }
+
+    .product_text a:active {
+        color: #b59f5b;
+        text-decoration: underline;
     }
 
     .price_container {
@@ -4281,6 +4457,7 @@ body {
     }
 
     .shop_button {
+        position: relative;
         width: 38.8vh;
         height: 13.8vh;
         font-size: 3.8vh;
@@ -4289,6 +4466,10 @@ body {
         background-color: #b59f5b;
         border: none;
         color: #ffffff;
+    }
+
+    .shop_button:active {
+        background-color: #323232;
     }
 
     footer {
@@ -4376,4 +4557,3 @@ body {
     }
 
 }
-
